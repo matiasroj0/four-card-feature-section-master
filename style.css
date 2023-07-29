@@ -1,0 +1,186 @@
+:root {
+    /* primary */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    /* neutral */
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/*  */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    max-width: 32rem;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.title-light {
+    font-weight: 300;
+    color: var(--grayish-blue);
+    font-size: 1.7rem;
+}
+
+.title-bold {
+    font-weight: 600;
+    color: var(--very-dark-blue);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+header p {
+    color: var(--grayish-blue);
+    font-size: .9rem;
+}
+
+.card {
+    padding: 1rem;
+    padding-left: 1.6rem;
+    margin-bottom: 1.5rem;
+    border-radius: .4rem;
+    -webkit-box-shadow: 0px 9px 24px 0px rgba(163,165,174,1);
+    -moz-box-shadow: 0px 9px 24px 0px rgba(163,165,174,1);
+    box-shadow: 0px 9px 24px 0px rgba(163,165,174,1);
+    box-shadow: 1px 16px 9px -6px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 1px 16px 9px -6px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px 16px 9px -6px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+    color: var(--very-dark-blue);
+    font-size: 1.1rem;
+    padding-bottom: .3rem;
+}
+
+.card p {
+    color: var(--grayish-blue);
+    font-size: .82rem;
+    padding-bottom: 2.5rem;
+}
+
+.card img {
+    width: 18%;
+    margin-left: 75%;
+    padding-bottom: .6rem;
+}
+
+.supervisor {
+    border-top: 3px solid var(--cyan);
+}
+
+.team-builder {
+    border-top: 3px solid var(--red);
+}
+
+.karma {
+    border-top: 3px solid var(--orange);
+}
+
+.calculator {
+    border-top: 3px solid var(--blue);
+}
+
+@media (min-width: 1100px) {
+    body {
+        padding: 1rem 12rem;
+        overflow: hidden;
+    }
+
+    main {
+        max-width: initial;
+        display: flex;
+        flex-direction: column;
+    }    
+
+    header {
+        padding: .5rem;
+        padding-bottom: 2rem;
+        max-width: 32rem;
+        align-self: center;
+    }
+
+    .title-light {
+        font-size: 1.8rem;
+    }
+    
+    .title-bold {
+        font-size: 1.8rem;
+    }
+    
+    header p {
+        font-size: .9rem;
+    }
+
+    .cards {
+        margin-top: -90px;
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 0px 25px;
+        grid-template-areas: 
+            ". team-builder ."
+            "supervisor . calculator"
+            ". karma ."; 
+    }
+
+    .team-builder { grid-area: team-builder; }
+    .supervisor { grid-area: supervisor; }
+    .calculator { grid-area: calculator; }
+    .karma { grid-area: karma; }
+
+    .team-builder {
+        position: relative;
+        top: 110px;
+    }
+
+    .karma {
+        position: relative;
+        bottom: 110px;
+    }
+
+}
+
+
